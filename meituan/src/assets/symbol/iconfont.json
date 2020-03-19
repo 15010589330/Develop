@@ -1,0 +1,121 @@
+{
+  "id": "1687318",
+  "name": "meituan_color",
+  "font_family": "iconfont",
+  "css_prefix_text": "iconcolor-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "11229857",
+      "name": "借钱",
+      "font_class": "jieqian",
+      "unicode": "e67a",
+      "unicode_decimal": 59002
+    },
+    {
+      "icon_id": "1314393",
+      "name": "火车",
+      "font_class": "huoche",
+      "unicode": "e669",
+      "unicode_decimal": 58985
+    },
+    {
+      "icon_id": "3593404",
+      "name": "红包_签到",
+      "font_class": "hongbao_qiandao",
+      "unicode": "e63d",
+      "unicode_decimal": 58941
+    },
+    {
+      "icon_id": "5088163",
+      "name": "护盾",
+      "font_class": "hudun-copy",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "5122864",
+      "name": "美食",
+      "font_class": "meishi",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "6782985",
+      "name": "袋鼠服务",
+      "font_class": "daishufuwu",
+      "unicode": "e648",
+      "unicode_decimal": 58952
+    },
+    {
+      "icon_id": "8631056",
+      "name": "菜",
+      "font_class": "cai",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "8730091",
+      "name": "超市",
+      "font_class": "chaoshi",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "8746094",
+      "name": "猫眼电影",
+      "font_class": "maoyandianying",
+      "unicode": "e67e",
+      "unicode_decimal": 59006
+    },
+    {
+      "icon_id": "9525345",
+      "name": "免费领",
+      "font_class": "mianfeiling",
+      "unicode": "e61f",
+      "unicode_decimal": 58911
+    },
+    {
+      "icon_id": "10323853",
+      "name": "美团外卖",
+      "font_class": "meituanwaimai",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "11631930",
+      "name": "酒店住宿",
+      "font_class": "jiudianzhusu",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "12040132",
+      "name": "药",
+      "font_class": "yao",
+      "unicode": "e64a",
+      "unicode_decimal": 58954
+    },
+    {
+      "icon_id": "12131343",
+      "name": "休闲娱乐",
+      "font_class": "ziyuan-copy",
+      "unicode": "e640",
+      "unicode_decimal": 58944
+    },
+    {
+      "icon_id": "12362007",
+      "name": "打车",
+      "font_class": "car",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "12991811",
+      "name": "口罩",
+      "font_class": "kouzhao",
+      "unicode": "e666",
+      "unicode_decimal": 58982
+    }
+  ]
+}
