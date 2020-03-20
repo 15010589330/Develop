@@ -1,10 +1,10 @@
 <template>
   <div class="login">
-    <hedear>
+    <header>
       <div class=" loginimg">
         <img src="https://p0.meituan.net/travelcube/7c71ecc4b44d0e17447076cd23e501cb31967.png" alt="">
       </div>
-    </hedear>
+    </header>
     <div class="login-section">
       <div class="section">
         <p>
@@ -31,18 +31,14 @@
 <script>
   export default {
     name:'login',
-
   }
 </script>
 <style scoped lang="less">
   *{
-    margin: 0;
+    margin:0;
     padding: 0;
   }
-  .login{
-    margin-top: -.45rem;
-  }
-  hedear{
+  header{
     height: 2.7rem;
     box-sizing: border-box;
     padding-top: .5rem;
@@ -53,82 +49,84 @@
       height: 1.6rem;
       border-radius: 50%;
       img{
-        width: 50%;
-        height: 50%;
+        width: 100%;
+        height: 100%;
 
       }
     }
   }
   .login-section{
     width: 100%;
-    height: 4.4rem;
     .section{
-      padding: 0 .2rem;
-      height: 1.8rem;
+      padding: .3rem .65rem 0 .65rem;
       p:last-of-type{
-        width: 100%;
-        height: .4rem;
-        margin-top: .15rem;
-        border-bottom: .001rem #BDBDBD solid;
+        height: .7rem;
+        box-sizing: border-box;
+        padding-bottom: 0;
+        align-items: center;
         position: relative;
+        border-bottom: .001rem #646464 solid;
         span{
-          font-size: .15rem;
-          color: #2c3e50;
+          background-color: transparent;
+          color: #666;
+          cursor: pointer;
           position: absolute;
           right: 0;
-          bottom: .1rem;
-          border-left:.01rem #2c3e50 solid ;
-          display: inline-block;
-          width: .8rem;
+          bottom: .15rem;
+          border-left: .001rem #646464 solid;
+          text-align: center;
+          width: 1.5rem;
         }
         input{
+          font-size: .3rem;
+          padding-left: 0;
           caret-color: #FE8C00;
-          padding: 0;
-          height: .3rem;
+          letter-spacing: .002rem;
           position: absolute;
-          bottom: .05rem;
-          left: .65rem;
-          font-size: .15rem;
-          border: none;
-          outline:none;
+          bottom: .15rem;
         }
       }
       p:first-of-type{
-        width: 100%;
-        height: .4rem;
+        border-bottom: .001rem #646464 solid;
+        height: .7rem;
+        box-sizing: border-box;
         padding-bottom: 0;
-        border-bottom: .001rem #BDBDBD solid;
+        align-items: center;
         position: relative;
+        margin-bottom: .4rem;
         span{
-          font-size: .15rem;
-          color: #2c3e50;
-          position: absolute;
-          left: 0;
-          bottom: .1rem;
+          max-width: 45%;
+          display: flex;
+          min-width: 0;
+          font-size: .28rem;
+          color: #646464;
+          padding-top: .1rem;
         }
         input{
           caret-color: #FE8C00;
+          font-size: .3rem;
           padding: 0;
-          height: .3rem;
+          letter-spacing: .002rem;
+          height: .5rem;
+         /* line-height: 1.2em;*/
           position: absolute;
-          bottom: .05rem;
-          left: .65rem;
-          font-size: .15rem;
-          border: none;
-          outline:none;
+          left: 1.3rem;
+          bottom: .07rem;
         }
       }
       button{
+        margin-top: 2em;
         color: #222222;
-        /*opacity: 0.3;*/
-        border-radius: .15rem;
-        height: .45rem;
-        font-size: .2rem;
+        font-family: PingFangSC-Medium;
+        border-radius: .2rem;
+        height: .9rem;
+        line-height: .9rem;
         background-image: linear-gradient(-133deg, #FFBD00 0%, #FFD000 100%);
         width: 100%;
-        border: 0;
-        transform: translate(0,-.3rem);
-        outline:none;
+        display: block;
+        border: none;
+        cursor: pointer;
+        font-size: 1em;
       }
     }
     ul{
@@ -138,24 +136,25 @@
         color: #999;
         text-align: center;
         height: .2rem;
+        margin: .2rem;
       }
       li:last-of-type{
-        font-size: .1rem;
+        font-size: .25rem;
         color: #222;
         text-align: center;
-        margin-top: .1rem;
+        margin-top: .45rem;
       }
     }
   }
   .login-footer{
-    margin: 0 auto;
-    color: #999;
     width: 100%;
     text-align: center;
-    font-size: .1rem;
-   /* position: absolute;
-    bottom: .2rem;*/
-    margin: 0 auto;
+    font-size: .24rem;
+    height: 1rem;
+    position: fixed;
+    bottom:0rem;
+    background: #ffffff;
+    z-index: 100;
     span{
       color: #FE8C00;
     }

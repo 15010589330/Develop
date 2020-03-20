@@ -9,7 +9,6 @@ const store= new Vuex.Store({
     //   },
      strict:true,//开启严格模式，唯一改变状态的方式只有mutations，否则报错
      state:{//存状态
-        
      },
      mutations:{//唯一改变状态的方式,不支持异步操作
      },
