@@ -140,7 +140,7 @@ export default {
       }
     }
     .header-title{
-      font-size: 0.32rem;
+      font-size: 0.35rem;
       text-align: center;
       line-height: 1rem;
       width: 3.3rem;
