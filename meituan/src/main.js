@@ -4,7 +4,8 @@ import router from './router'
 import store from './store'
 import plugins from './base'
 import "@/assets/iconfont/iconfont.css"; 
-import "@/assets/symbol/iconfont.js"; 
+import "@/assets/symbol/iconfont.js";
+import "@/assets/fontmy/iconfont.js";
 
 plugins.init(Vue);
 require('./mock')
