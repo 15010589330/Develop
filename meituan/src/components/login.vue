@@ -9,13 +9,13 @@
       <div class="section">
         <p>
           <span href="" >中国+86</span>
-          <input type="el" placeholder="请输入手机号/用户名" maxlengh="13">
+          <input type="el" v-model="name" placeholder="请输入手机号/用户名" maxlengh="13">
         </p>
         <p>
-          <input type="password" placeholder="请输入密码/验证码" maxlengh="13">
+          <input type="password" v-model="pass" placeholder="请输入密码/验证码" maxlengh="13">
           <span>获取验证码</span>
         </p>
-        <button>登陆</button>
+        <button @tap="landing">登陆</button>
       </div>
       <ul>
         <li>未注册的手机号验证后自动创建美团账户</li>
@@ -31,6 +31,24 @@
 <script>
   export default {
     name:'login',
+    data(){
+      return{
+        name:'',
+        pass:''
+      }
+    },
+    methods:{
+      landing(){
+        if (this.name!=''&&this.pass!='') {
+          this.$store.commit('mgetmyName',this.name)
+          setTimeout(()=>{
+            this.$router.push(this.$route.query.f)
+          },500)
+        }else{
+          alert('您输入的用户名或密码不正确');
+        }
+      }
+    }
   }
 </script>
 <style scoped lang="less">

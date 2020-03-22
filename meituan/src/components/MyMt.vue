@@ -17,18 +17,19 @@
           <img src="http://s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:d5896c44/touch/img/pic-default.png" alt="">
         </div>
         <div class="user">
-          <p>rRh123456789</p>
+          <p>{{getName}}</p>
           <p></p>
           <div>账户余额：<span>0</span>元</div>
         </div>
       </div>
       <div class="list">
-        <p class="order">
+        <router-link to="/FormMt" tag="p" class="order">
           <svg class="icon" aria-hidden="true">
             <use xlink:href="#icon-dingdan"></use>
           </svg>
           <span>全部订单</span>
-        </p>
+          <span class="extend"></span>
+        </router-link>
         <div>
           <ul>
             <li>
@@ -64,22 +65,26 @@
             <use xlink:href="#icon-shoucang"></use>
           </svg>
           <span>我的收藏</span>
+          <span class="extend"></span>
         </dd>
         <dd>
           <svg class="icon" aria-hidden="true">
             <use xlink:href="#icon-icon_A"></use>
           </svg>
           <span>我的抵用券</span>
+          <span class="extend"></span>
         </dd>
         <dd>
           <svg class="icon" aria-hidden="true">
             <use xlink:href="#icon-liwu_jiangpin_choujiang"></use>
           </svg>
           <span>我的抽奖单</span>
+          <span class="extend"></span>
         </dd>
         <dd>
           <img src="http://p0.meituan.net/mmc/7a85a206820814190b1fc332c10f37cf3081.png" alt="">
           <span>积分换礼品</span>
+          <span class="extend"></span>
         </dd>
       </dl>
       <footer>
@@ -105,7 +110,12 @@
 
 <script>
 export default {
-    name:'MyMt'
+    name:'MyMt',
+  computed:{
+      getName(){
+        return this.$store.state.myName||localStorage.getItem('myName')
+      }
+  }
 }
 </script>
 
@@ -116,6 +126,18 @@ export default {
     vertical-align: -0.15em;
     fill: currentColor;
     overflow: hidden;
+  }
+  .extend{
+    display: inline-block;
+    float: right;
+    margin-top: .35rem;
+    margin-right: .35rem;
+    width: .13rem;
+    height: .13rem;
+    border-right:2px solid #666;
+    border-top:2px solid #666;
+    transform:rotate(45deg)
+
   }
   .MyMt{
     font-size: .28em;

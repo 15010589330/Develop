@@ -9,8 +9,14 @@ const store= new Vuex.Store({
     //   },
      strict:true,//开启严格模式，唯一改变状态的方式只有mutations，否则报错
      state:{//存状态
+       myName:''
      },
      mutations:{//唯一改变状态的方式,不支持异步操作
+       mgetmyName(state,name){
+         state.myName=name
+         console.log(state.myName);
+         localStorage.setItem('myName',name)
+       }
      },
      getters:{//相当于计算属性，二次包装了state的状态
      },
