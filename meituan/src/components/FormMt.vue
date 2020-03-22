@@ -13,8 +13,8 @@
         </div>
       </header>
       <dl class="menu">
-        <dd @tap="getlist">全部</dd>
-        <dd @tap="payment">待付款</dd>
+        <dd @tap="getlist" :class="{select:isall}">全部</dd>
+        <dd @tap="payment" >待付款</dd>
         <dd @tap="use">待使用</dd>
         <dd @tap="evaluation">待评价</dd>
         <dd @tap=" refund">退款/售后</dd>
