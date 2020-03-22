@@ -234,6 +234,7 @@ export default {
   created() {
     axios.get("/mock/index").then(res => {
         this.fallindex=res.data
+      console.log(res.data)
         this.updateWaterFalls();
     });
   },
@@ -244,11 +245,11 @@ export default {
     updateWaterFalls(){
       let leftHeight = this.$refs.left.clientHeight;
       let rightHeight = this.$refs.right.clientHeight;
-      console.log(leftHeight)
-      console.log(rightHeight)
+      //console.log(leftHeight)
+      //console.log(rightHeight)
       let falls = this.fallindex.shift();
-      console.log(this.fallindex)
-      console.log(falls)
+      //console.log(this.fallindex)
+      //console.log(falls)
       if(falls ==null){
         return
       }

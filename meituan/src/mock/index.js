@@ -3,7 +3,7 @@ const Random = Mock.Random;
 let dataindex = [];
 /* Mock.setup({
     timeout:300
-}); */
+});*/
 Random.extend({
     shopname:function(){
         let shopname = ['麦当劳','和合谷(北京丰台区分店)','张姐烤肉拌饭','好时光','吉野家','杨国福麻辣拌','翠满楼',

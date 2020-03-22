@@ -13,11 +13,11 @@
         </div>
       </header>
       <dl class="menu">
-        <dd @tap="getlist" :class="{select:isall}">全部</dd>
-        <dd @tap="payment" >待付款</dd>
-        <dd @tap="use">待使用</dd>
-        <dd @tap="evaluation">待评价</dd>
-        <dd @tap=" refund">退款/售后</dd>
+        <dd @tap="getlist">全部 <div v-if="boo==1?true:false"></div></dd>
+        <dd @tap="payment">待付款 <div v-if="boo==2?true:false"></div></dd>
+        <dd @tap="use">待使用 <div v-if="boo==3?true:false"></div></dd>
+        <dd @tap="evaluation">待评价 <div v-if="boo==4?true:false"></div></dd>
+        <dd @tap=" refund">退款/售后 <div v-if="boo==5?true:false"></div></dd>
       </dl>
       <div class="commodity" v-for="item in list" :key="item.id">
         <div class="list">
@@ -45,7 +45,8 @@ export default {
         timer:'',
         total:'',//总页数
         page:'1',//当前页数
-        curr:'10'//一页多少条
+        curr:'10',//一页多少条
+        boo:1,
       }
   },
   mounted(){
@@ -54,27 +55,32 @@ export default {
   },
   methods:{
     getlist(page,curr){
+        this.boo = 1
       API.order(page,curr).then((res)=>{
         this.total=res.data.total
         this.list=[...this.list,...res.data.order]
       })
     },
     payment(){
+      this.boo=2
       API.payment().then((res)=>{
         this.list=res.data.order
       })
     },
     use(){
+      this.boo=3
       API.use().then((res)=>{
         this.list=res.data.order
       })
     },
     evaluation(){
+      this.boo=4
       API.evaluation().then((res)=>{
         this.list=res.data.order
       })
     },
     refund(){
+      this.boo=5
       API. refund().then((res)=>{
         this.list=res.data.order
       })
@@ -168,6 +174,14 @@ export default {
     dd{
       flex: 1;
       font-size: .3rem;
+      text-align: center;
+      div{
+        width: 1rem;
+        height: .05rem;
+        background: #FFBD00;
+        margin-left: .25rem;
+        margin-top: .1rem;
+      }
     }
   }
   .commodity:first-of-type{
